@@ -21,15 +21,12 @@ const io = require("socket.io")(server)
 io.on('connection', (socket) => {
   console.log('New user connected')
 
-	//default username
 	socket.username = "Guest"
 
-    //listen on change_username
     socket.on('change_username', (data) => {
         socket.username = data.username
     })
 
-    //listen on new_message
     socket.on('new_message', (data) => {
         //broadcast the new message
         io.sockets.emit('new_message', {message : data.message, username : socket.username});
