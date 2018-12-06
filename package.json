@@ -4,7 +4,7 @@
   "description": "Simple chat app build with node.js and socket.io",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "export NODE_ENV=test && jasmine",
     "start": "nodemon app"
   },
   "author": "Azumi",
@@ -13,9 +13,11 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "nodemon": "^1.18.7",
+    "request": "^2.88.0",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
+    "jasmine": "^3.3.1",
     "ws": "3.3.2"
   }
 }

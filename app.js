@@ -35,5 +35,6 @@ io.on('connection', (socket) => {
     socket.on('typing', (data) => {
       socket.broadcast.emit('typing', {username: socket.username})
     })
-
 })
+
+module.exports = app;
